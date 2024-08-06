@@ -62,6 +62,7 @@ class AllowPrimer(SpecificationSet):
         avoid_heterodim_with=None,
         max_heterodim_tm=5,
         avoided_repeats=((2, 5), (3, 4), (4, 3)),
+        boost=1.0,
     ):
         location = Location.from_data(location)
         specs = {
@@ -86,3 +87,4 @@ class AllowPrimer(SpecificationSet):
                 location=location,
             )
         self.register_specifications(specs)
+        self.boost = boost
